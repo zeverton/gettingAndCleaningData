@@ -15,8 +15,8 @@ To run the script follow these steps:
 The output has 4 columns of data:
 1. Activity (ie Laying, Walking, etc.)
 2. Subject (designated by number)
-3. VariableDescription (description of the particular data collected and represented in the table)
-4. meanOfValues (summarized data ouputted by the run_analysis script)
+3. FeaturesDescription (description of the features data collected and represented in the table)
+4. Mean (summarized data ouputted by the run_analysis script)
 
 DATA DICTIONARY ("Code Book") for run_analysis output
 
@@ -31,7 +31,7 @@ ACTIVITY
 
 SUBJECT
 	Subject number
-	   1:30
+	   1-30
 
 FEATURESDESC
 	Descriptive names of Features
