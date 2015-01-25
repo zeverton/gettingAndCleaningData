@@ -68,6 +68,8 @@ for(i in 1:ncol(data)-1){
 #finally we take the data and calculate the mean of each variable by subject and activty, which forces us to rename the columns
 #just for fun, i sorted the data before exporting the tidy "clean" data to a txt file.
 final <- aggregate(final$values, by=list(activity,subject,ind),FUN=mean,na.rm=TRUE)
-colnames(final) <- c("activity","subject","variableDescription","meanOfValues")
-final <- final[order(Group.2,Group.1,Group.3),]
+colnames(final) <- c("Activity","Subject","FeaturesDesc","Mean")
+attach(final)
+final <- final[order(Activity,Subject,FeaturesDesc),]
+detach(final)
 write.table(final,file= "cleanData.txt", row.name=FALSE)
